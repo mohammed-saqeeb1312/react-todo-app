@@ -12,8 +12,7 @@ I also added automatic date and time display for every new task.
 
 Here is a look at my project:
 
-![React To-Do App Screenshot](./screenshots/todo-app.png)
-
+![React To-Do App Screenshot](./src/screenshots/todo-app.png)
 ## Features
 
 - Add new tasks
