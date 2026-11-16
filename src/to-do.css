@@ -1,0 +1,468 @@
+
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #164e63,
+        #0284c7
+    );
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.Todo {
+    width: 100%;
+    max-width: 750px;
+    min-height: 350px;
+
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+}
+
+/* =========================
+   HEADING
+========================= */
+.Todo h1 {
+    color: white;
+    font-size: 38px;
+    font-weight: 750;
+
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   INPUT FIELD
+========================= */
+.Todo input[type="text"] {
+    width: 70%;
+
+    padding: 15px 16px;
+
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 10px;
+
+    background: #f8fafc;
+    color: #0f172a;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+.Todo input[type="text"]:focus {
+    border-color: #38bdf8;
+
+    box-shadow: 0 0 0 4px
+        rgba(56, 189, 248, 0.18);
+}
+
+.Todo input[type="text"]::placeholder {
+    color: #94a3b8;
+}
+
+/* =========================
+   GENERAL BUTTONS
+========================= */
+.Todo button {
+    padding: 13px 18px;
+
+    margin-left: 8px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #38bdf8;
+    color: #082f49;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.Todo button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   ADD BUTTON
+========================= */
+.Todo > button:first-of-type {
+    background: #22c55e;
+    color: white;
+}
+
+.Todo > button:first-of-type:hover {
+    background: #16a34a;
+    box-shadow: 0 5px 15px
+        rgba(34, 197, 94, 0.3);
+}
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.Todo > button:nth-of-type(2) {
+    display: block;
+
+    width: 30%;
+    margin: 15px auto 0;
+
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.Todo > button:nth-of-type(2):hover {
+    background: #d97706;
+    color: white;
+}
+
+.Todo > button:nth-of-type(2):hover {
+    background: #d97706;
+    color: white;
+}
+
+/* =========================
+   TASK LIST
+========================= */
+.Todo ul {
+    list-style: none;
+
+    margin-top: 30px;
+    padding: 0;
+
+    width: 100%;
+}
+
+/* =========================
+   INDIVIDUAL TASK CARD
+========================= */
+.Todo li.task-item {
+    display: grid;
+
+    grid-template-columns:
+        24px
+        minmax(80px, 1.3fr)
+        minmax(110px, 1fr)
+        minmax(115px, 1fr)
+        auto;
+
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+
+    padding: 19px 20px;
+    margin-bottom: 14px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-radius: 15px;
+
+    color: white;
+    font-size: 15px;
+    text-align: left;
+
+    transition: all 0.3s ease;
+}
+
+/* TASK HOVER */
+.Todo li.task-item:hover {
+    background: rgba(255, 255, 255, 0.20);
+
+    border-color: #38bdf8;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px
+        rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+.Todo li.task-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+
+    margin: 0;
+
+    accent-color: #22c55e;
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+/* =========================
+   TASK NAME
+========================= */
+.task-name {
+    min-width: 0;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 650;
+
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+
+    transition: 0.3s ease;
+}
+
+/* =========================
+   DATE AND TIME
+========================= */
+.task-date,
+.task-time {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+    min-width: 0;
+}
+
+/* DATE AND TIME LABEL */
+.task-date span,
+.task-time span {
+    color: #bae6fd;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* DATE AND TIME VALUE */
+.task-date strong,
+.task-time strong {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 650;
+
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+}
+
+/* =========================
+   DELETE BUTTON
+========================= */
+.Todo li.task-item button {
+    margin: 0;
+
+    padding: 10px 16px;
+
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+
+    border: 1px solid
+        rgba(239, 68, 68, 0.4);
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+.Todo li.task-item button:hover {
+    background: #dc2626;
+    color: white;
+
+    border-color: #dc2626;
+
+    transform: scale(1.05);
+}
+
+/* =========================
+   COMPLETED TASK
+========================= */
+.Todo li.task-item.completed {
+    background: rgba(34, 197, 94, 0.10);
+
+    border-color: rgba(34, 197, 94, 0.45);
+}
+
+/* COMPLETED TASK TEXT */
+.Todo li.task-item.completed .task-name {
+    color: #86efac;
+
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width: 700px) {
+
+    .Todo {
+        padding: 30px 22px;
+    }
+
+    .Todo li.task-item {
+        grid-template-columns:
+            22px
+            minmax(65px, 1fr)
+            minmax(90px, 1fr)
+            minmax(95px, 1fr)
+            auto;
+
+        gap: 10px;
+        padding: 16px 12px;
+    }
+
+    .task-name {
+        font-size: 14px;
+    }
+
+    .task-date strong,
+    .task-time strong {
+        font-size: 12px;
+    }
+
+    .Todo li.task-item button {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 550px) {
+
+    body {
+        align-items: flex-start;
+        padding: 20px 12px;
+    }
+
+    .Todo {
+        width: 100%;
+        padding: 25px 15px;
+        border-radius: 16px;
+    }
+
+    .Todo h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    /* INPUT */
+    .Todo input[type="text"] {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    /* ADD BUTTON */
+    .Todo > button:first-of-type {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* CLEAR BUTTON */
+    .Todo > button:nth-of-type(2) {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    /* TASK CARD */
+    .Todo li.task-item {
+        grid-template-columns: 22px 1fr 1fr;
+
+        gap: 12px;
+        padding: 16px;
+    }
+
+    /* TASK NAME */
+    .task-name {
+        grid-column: 2 / 4;
+        font-size: 15px;
+    }
+
+    /* DATE AND TIME */
+    .task-date,
+    .task-time {
+        grid-row: 2;
+    }
+
+    /* DELETE */
+    .Todo li.task-item button {
+        grid-column: 2 / 4;
+
+        width: 100%;
+        margin: 0;
+
+        padding: 10px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 380px) {
+
+    .Todo {
+        padding: 22px 12px;
+    }
+
+    .Todo h1 {
+        font-size: 26px;
+    }
+
+    .Todo li.task-item {
+        gap: 9px;
+        padding: 13px;
+    }
+
+    .task-date strong,
+    .task-time strong {
+        font-size: 12px;
+    }
+}
