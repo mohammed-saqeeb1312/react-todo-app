@@ -1,16 +1,88 @@
-# React + Vite
+# React To-Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple and responsive To-Do List application built with React.js. I created this project to practice React fundamentals and improve my frontend development skills.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This application helps users manage their daily tasks in one place. Users can add tasks, mark them as completed, delete individual tasks, and clear the entire task list.
 
-## React Compiler
+I also added automatic date and time display for every new task.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screenshots
 
-## Expanding the Oxlint configuration
+Here is a look at my project:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+![React To-Do App Screenshot](./screenshots/todo-app.png)
+
+## Features
+
+- Add new tasks
+- Mark tasks as completed using checkboxes
+- Automatically display task date and time
+- Delete individual tasks
+- Clear all tasks with one click
+- Responsive layout for different screen sizes
+- Simple and clean user interface
+
+## Technologies Used
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+
+## Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Open the project folder
+
+```bash
+cd react-todo-app
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in your terminal to use the application.
+
+## What I Learned
+
+While building this project, I got practical experience with:
+
+- React functional components
+- useState Hook
+- Handling user events
+- Rendering lists using map()
+- Updating and deleting items using filter()
+- Managing checkbox states
+- Styling components with CSS
+- Creating responsive layouts
+
+## Author
+
+**Mohammed Saqeeb**
+
+Frontend Development Learner
+
+GitHub: https://github.com/mohammed-saqeeb-786
+
+---
+
+This project is part of my journey in learning React.js and building practical frontend applications.
