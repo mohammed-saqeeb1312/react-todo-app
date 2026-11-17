@@ -8,11 +8,16 @@ This application helps users manage their daily tasks in one place. Users can ad
 
 I also added automatic date and time display for every new task.
 
+## Live Demo
+
+[React To-Do App](https://react-todo-app-eta-drab.vercel.app/)
+
 ## Screenshots
 
 Here is a look at my project:
 
 ![React To-Do App Screenshot](./src/screenshots/todo-app.png)
+
 ## Features
 
 - Add new tasks
